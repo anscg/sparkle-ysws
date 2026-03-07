@@ -1,7 +1,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import PageHome from "@/pages/Home/Home";
 import Layout from "@/pages/Layout/Layout";
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <BrowserRouter>
@@ -10,6 +10,7 @@ function App() {
           <Route index element={<PageHome />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
