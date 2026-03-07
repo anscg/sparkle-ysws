@@ -11,7 +11,9 @@ const PageHome = () => {
     width >= 2200 ? bg_2560x1440 : bg_1920x1080;
 
   const [heroBackground, setHeroBackground] = useState(() =>
-    typeof window === "undefined" ? bg_1920x1080 : selectBackground(window.innerWidth),
+    typeof window === "undefined"
+      ? bg_1920x1080
+      : selectBackground(window.innerWidth),
   );
 
   useEffect(() => {
@@ -45,7 +47,11 @@ const PageHome = () => {
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
         <div className="absolute left-1/2 top-3 -translate-x-1/2 sm:top-4 w-30">
-          <img src={hc_flag} alt="Hack Club flag transparent white" width={"120px"}/>
+          <img
+            src={hc_flag}
+            alt="Hack Club flag transparent white"
+            width={"120px"}
+          />
 
           {/* <a href="https://hackclub.com/">
             <img
@@ -62,8 +68,8 @@ const PageHome = () => {
             />
           </a> */}
         </div>
-        <div className="flex flex-col pt-60 sm:pt-48 md:pt-36 lg:pt-50 text-center text-[#ffffff] text-shadow-md">
-          <span className="pb-4 text-base opacity-80 sm:pb-5 sm:text-lg md:text-xl">
+        <div className="self-start mt-60 sm:mt-48 md:mt-36 lg:mt-50 flex flex-col text-center text-[#ffffff] text-shadow-md bg-amber-300/50 rounded shadow-accent shadow-md p-5">
+          <span className="pb-4 opacity-80 sm:pb-5 sm:text-lg md:text-xl">
             RSVP form available
           </span>
           <h1 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
@@ -89,24 +95,67 @@ const PageHome = () => {
         </span>
       </section>
 
-      <section className="flex min-h-screen w-full flex-col p-6 bg-black">
-        <div className="flex flex-col gap-6 p-10 items-start">
-          <div className="">
-          <span className="text-4xl text-white">What is sparkle?</span>
+      <section className="flex min-h-screen w-full flex-col bg-black px-4 py-8 sm:px-6 sm:py-10 lg:px-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 xl:flex-row xl:items-start">
+          <div className="flex w-full flex-col gap-6 items-center lg:items-start">
+            <div className="">
+              <span className="text-3xl text-white sm:text-4xl">What is sparkle?</span>
+            </div>
+            {/* boxes for explainers */}
+            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-amber-300 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-2xl font-bold sm:text-3xl">1.</span>
+                <span className="text-xl sm:text-2xl">
+                  <b>Get a friend</b> and invite them to join you
+                </span>
+              </div>
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-amber-300 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-2xl font-bold sm:text-3xl">2.</span>
+                <span className="text-xl sm:text-2xl">
+                  <b>Learn together.</b> Make your friend teach you a new skill.
+                  Or maybe a new language?
+                </span>
+              </div>
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-amber-300 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-2xl font-bold sm:text-3xl">3.</span>
+                <span className="text-xl sm:text-2xl">
+                  <b>Track your progress</b> via [placeholder]
+                </span>
+              </div>
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-amber-300 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-2xl font-bold sm:text-3xl">4.</span>
+                <span className="text-xl sm:text-2xl">
+                  <b>Earn cool prizes!</b> You and your friend earn a reward!
+                </span>
+              </div>
+            </div>
           </div>
-          {/* boxes for explainers */}
-          <div className="grid grid-cols-2 gap-10">
-            <div className="w-70 h-70 bg-amber-200 p-5 flex flex-col gap-2">
-              <span className="font-bold text-3xl">1.</span>
-              <span className="text-2xl">Get a friend</span>
+          <div className="flex w-full flex-col gap-6 items-center lg:items-start">
+            <div className="">
+              <span className="text-3xl text-white sm:text-4xl">Rewards?</span>
             </div>
-            <div className="w-70 h-70 bg-amber-200 p-5 flex flex-col gap-2">
-              <span className="font-bold text-3xl">2.</span>
-              <span className="text-2xl">Learn together</span>
-            </div>
-            <div className="w-70 h-70 bg-amber-200 p-5 flex flex-col gap-2">
-              <span className="font-bold text-3xl">3.</span>
-              <span className="text-2xl">Earn cool prizes!</span>
+            {/* boxes for explainers */}
+            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-cyan-200 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-xl sm:text-2xl">
+                  reward 1 img
+                </span>
+              </div>
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-cyan-200 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-xl sm:text-2xl">
+                  reward 2 img
+                </span>
+              </div>
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-cyan-200 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-xl sm:text-2xl">
+                  reward 3 img
+                </span>
+              </div>
+              <div className="flex min-h-56 w-full flex-col gap-2 rounded bg-cyan-200 p-4 sm:min-h-64 sm:p-5">
+                <span className="text-xl sm:text-2xl">
+                  reward 4 img
+                </span>
+              </div>
             </div>
           </div>
         </div>
