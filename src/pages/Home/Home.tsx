@@ -135,44 +135,45 @@ const PageHome = () => {
         </span> */}
       </section>
 
-      <section className="flex font-dynapuff min-h-screen w-full flex-col bg-cyan-400 px-4 py-8 sm:px-6 sm:py-10 lg:px-10">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 xl:flex-row">
-          <div className="flex w-full flex-col items-center">
-            <div className="flex items-center justify-center">
-              <span className="text-5xl text-white sm:text-6xl font-bold">
-                What is sparkle? ✨
-              </span>
-            </div>
-            {/* boxes for explainers */}
-            <div className="flex w-full -mt-10 flex-col -space-y-20 sm:-space-y-36 md:-space-y-50 lg:-space-y-45">
-              <CloudStepCard step="1">
-                <b>Get a friend</b> and invite them to join you
-              </CloudStepCard>
-              <CloudStepCard step="2">
-                <b>Learn together.</b> Make your friend teach you a new skill.
-                Or maybe a new language?
-              </CloudStepCard>
-              <CloudStepCard step="3">
-                <b>Track your progress</b> via{" "}
-                <a
-                  href="https://hackatime.hackclub.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-blue-500"
-                >
-                  Hackatime
-                </a>
-              </CloudStepCard>
-              <CloudStepCard step="4">
-                <b>Earn cool prizes!</b> You and your friend earn a reward!
-              </CloudStepCard>
+      <div className="bg-gradient-to-b from-cyan-200/80 via-cyan-300/65 to-cyan-400/80">
+        <section className="flex font-dynapuff min-h-screen w-full flex-col px-4 py-8 sm:px-6 sm:py-10 lg:px-10">
+          <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 xl:flex-row">
+            <div className="flex w-full flex-col items-center">
+              <div className="flex items-center justify-center">
+                <span className="text-5xl text-white sm:text-6xl font-bold">
+                  What is sparkle? ✨
+                </span>
+              </div>
+              {/* boxes for explainers */}
+              <div className="flex w-full -mt-10 flex-col -space-y-20 sm:-space-y-36 md:-space-y-50 lg:-space-y-45">
+                <CloudStepCard step="1">
+                  <b>Get a friend</b> and invite them to join you
+                </CloudStepCard>
+                <CloudStepCard step="2">
+                  <b>Learn together.</b> Make your friend teach you a new skill.
+                  Or maybe a new language?
+                </CloudStepCard>
+                <CloudStepCard step="3">
+                  <b>Track your progress</b> via{" "}
+                  <a
+                    href="https://hackatime.hackclub.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-[#FD3A4F]"
+                  >
+                    Hackatime
+                  </a>
+                </CloudStepCard>
+                <CloudStepCard step="4">
+                  <b>Earn cool prizes!</b> You and your friend earn a reward!
+                </CloudStepCard>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-cyan-400 text-black  flex items-center justify-center w-full">
-        <div className="md:w-5/6 xl:w-2/3 bg-yellow-300 border-4  border-x-0 items-center justify-center gap-4 p-4">
+        <section className="text-black flex items-center justify-center w-full py-4">
+          <div className="w-full max-w-5xl mx-auto border-4 border-white/50 bg-white/20 items-center justify-center gap-4 p-4">
           <h1 className="text-5xl font-dynapuff text-center mb-5">FAQ</h1>
           <div className="grid grid-cols-1 gap-4">
             <div className="flex flex-col border-4 border-black/50 p-2 text-lg">
@@ -181,20 +182,30 @@ const PageHome = () => {
               </span>
               <span className="font-medium">
                 A: Yes! Your project must have a public github repo and have
-                time tracked on Hackatime.
+                time tracked on <a
+                    href="https://hackatime.hackclub.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-[#FD3A4F]"
+                  >
+                    Hackatime
+                  </a>.
               </span>
             </div>
             <div className="flex flex-col border-4 border-black/50 p-2 text-lg">
               <span className="font-dynapuff">
                 Q: What can I learn from my partner/teacher?
               </span>
-              <span className="font-medium flex-wrap">
+              <span className="font-medium">
                 A: Anything you like! You and your partner just have to make a
                 project out of it, and journal it so we know you have been
                 learning! Please note that you are required to journal the
                 learning process per week in order to make your hours count! If
-                you taught your partner something interesting... we MIGHT offer
-                better rates for you <img src={eyeshake} alt="" className="w-5"/>
+                you taught your partner something interesting... we MIGHT offer be
+                <span className="whitespace-nowrap">
+                  tter rates for you
+                  <img src={eyeshake} alt="" className="ml-1 inline w-5" />
+                </span>
               </span>
             </div>
             <div className="flex flex-col border-4 border-black/50 p-2 text-lg">
@@ -206,40 +217,40 @@ const PageHome = () => {
               </span>
             </div>
           </div>
-        </div>
+          </div>
+        </section>
+
+        <section className="w-full font-dynapuff py-10">
+          <div className="flex flex-col md:flex-row w-full bg-cyan-300 border-4 border-x-0 items-center justify-center gap-4 p-4">
+            <h1 className="text-4xl">
+                Questions left?
+              <br /> <u>Join our Slack channel</u>
+            </h1>
+            <button
+              className="bg-yellow-300 p-4 rounded-full hover:scale-120 transition-all"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(
+                  "https://hackclub.enterprise.slack.com/archives/C0AG9ASJ5U4",
+                  "_blank",
+                );
+              }}
+            >
+              Open channel
+            </button>
+            <button
+              className="bg-red-300 p-4 rounded-full hover:scale-120 transition-all"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("https://hackclub.com/slack", "_blank");
+              }}
+            >
+              Join Hack Club slack
+            </button>
+          </div>
       </section>
 
-      <section className="bg-cyan-400 w-full font-dynapuff py-10">
-        <div className="flex flex-col md:flex-row w-full bg-cyan-300 border-4 border-x-0 items-center justify-center gap-4 p-4">
-          <h1 className="text-4xl">
-            Questions left?
-            <br /> <u>Join our Slack channel</u>
-          </h1>
-          <button
-            className="bg-yellow-300 p-4 rounded-full hover:scale-120 transition-all"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open(
-                "https://hackclub.enterprise.slack.com/archives/C0AG9ASJ5U4",
-                "_blank",
-              );
-            }}
-          >
-            Open channel
-          </button>
-          <button
-            className="bg-red-300 p-4 rounded-full hover:scale-120 transition-all"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open("https://hackclub.com/slack", "_blank");
-            }}
-          >
-            Join Hack Club slack
-          </button>
-        </div>
-      </section>
-
-      <section className="w-full bg-black text-white font-dynapuff">
+      <section className="w-full text-white font-dynapuff">
         <div className="p-4 text-center flex flex-col items-center">
           <span className="text-2xl sm:text-3xl ">
             What are you waiting for? RSVP now!
@@ -266,12 +277,12 @@ const PageHome = () => {
             </button>
           </form>
         </div>
-      </section>
+      </section></div>
 
       <section className="w-full bg-black font-dynapuff">
         <div className="p-2 text-center">
           <span className="text-xs sm:text-sm text-gray-400">
-            Website - @yehor, Idea - @zook, Art - @candy
+            Website - @yehor & @zook,  Ideas - @zook, Art -  @candy
           </span>
         </div>
       </section>
