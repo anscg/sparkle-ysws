@@ -28,7 +28,7 @@ const PageHome = () => {
   const [email, setEmail] = useState("");
   const bg_1920x1080 = sparkle_bg_1920x1080;
   const bg_2560x1440 = sparkle_bg_2560x1440;
-
+  // const [sparkleClicks, setSparkleClicks] = useState(0);
   const selectBackground = (width: number) =>
     width >= 2200 ? bg_2560x1440 : bg_1920x1080;
 
@@ -122,6 +122,7 @@ const PageHome = () => {
         <span className="absolute bottom-5 text-xl text-cyan-500 drop-shadow-xl">
           Scroll down to learn more!
         </span>
+        <span className="absolute bottom-10 right-10 text-7xl p-5 hover:cursor-pointer" onClick={() => alert("e")}>✨</span>
       </section>
 
       <section className="flex font-dynapuff min-h-screen w-full flex-col bg-cyan-400 px-4 py-8 sm:px-6 sm:py-10 lg:px-10">
@@ -152,7 +153,7 @@ const PageHome = () => {
         </div>
       </section>
       <section className="bg-cyan-400 w-full font-dynapuff py-10 -mt-20 md:-mt-35">
-        <div className="flex flex-col md:flex-row w-full bg-white items-center justify-center gap-4 p-4">
+        <div className="flex flex-col md:flex-row w-full bg-cyan-300 border-4 border-x-0 items-center justify-center gap-4 p-4">
           <h1 className="text-4xl">Questions left?<br /> <u>Join our Slack channel</u></h1>
           <button className="bg-yellow-300 p-4 rounded-full hover:scale-120 transition-all" onClick={(e) => {
             e.preventDefault();
