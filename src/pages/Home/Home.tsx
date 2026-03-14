@@ -149,6 +149,12 @@ const PageHome = () => {
           <span className="text-2xl sm:text-3xl ">What are you waiting for? RSVP now!</span>
         </div>
       </section>
+      
+      <section className="w-full bg-black">
+        <div className="p-2 text-center">
+          <span className="text-xs sm:text-sm text-gray-400">Website - @yehor, Idea - @zook</span>
+        </div>
+      </section>
     </div>
   );
 };
