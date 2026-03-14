@@ -59,7 +59,7 @@ const PageHome = () => {
       alert("Please enter a valid email address");
       return;
     }
-    alert(`RSVP for email ${email}`);
+    window.location.href = `https://forms.fillout.com/t/e2tRAi4Lh4us?email=${encodeURIComponent(email)}`;
   }
   return (
     <div className="w-full">
