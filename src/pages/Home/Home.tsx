@@ -198,7 +198,7 @@ const PageHome = () => {
       <section className="w-full bg-black font-dynapuff">
         <div className="p-2 text-center">
           <span className="text-xs sm:text-sm text-gray-400">
-            Website - @yehor, Idea - @zook
+            Website - @yehor, Idea - @zook, Art - @candy
           </span>
         </div>
       </section>
