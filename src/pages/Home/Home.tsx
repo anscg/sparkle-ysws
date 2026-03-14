@@ -94,7 +94,7 @@ const PageHome = () => {
             RSVP form available
           </span>
           <h1 className="font-dynapuff text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
-            Learn from a friend and get rewards!
+            Learn something from your friends, ship a project, and get rewards!
           </h1>
           <div className="mt-4 flex rounded bg-accent/50 p-2 text-black sm:mt-5">
             <input
