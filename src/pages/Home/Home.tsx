@@ -65,7 +65,7 @@ const PageHome = () => {
   return (
     <div className="w-full">
       <section
-        className="relative flex h-[80vh] w-full justify-center bg-cover bg-center p-3 sm:p-4"
+        className="relative flex h-[85vh] w-full justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
         <div className="absolute left-1/2 top-3 -translate-x-1/2 sm:top-4 w-30">
@@ -90,11 +90,11 @@ const PageHome = () => {
             />
           </a> */}
         </div>
-        <div className="self-start mt-60 sm:mt-48 md:mt-36 lg:mt-50 flex flex-col text-center text-[#ffffff] text-shadow-md bg-amber-300/50 rounded-2xl p-5">
-          <span className="font-dynapuff pb-4 opacity-80 sm:pb-5 sm:text-lg md:text-xl">
+        <div className="self-start md:w-3/4 mt-30 sm:mt-28 md:mt-26 lg:mt-30 xl:mt-40 flex flex-col  text-[#ffffff] text-shadow-md bg-amber-300/80 md:rounded-2xl p-5">
+          <span className="font-dynapuff opacity-80 sm:text-lg md:text-xl">
             RSVP form available
           </span>
-          <h1 className="font-dynapuff text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="font-dynapuff text-2xl font-bold leading-tight sm:text-3xl md:text-4xl xl:text-5xl">
             Learn something from your friends, ship a project, and get rewards!
           </h1>
           <form
@@ -119,7 +119,7 @@ const PageHome = () => {
             </button>
           </form>
         </div>
-        <span className="absolute bottom-5 text-xl text-white drop-shadow-xl">
+        <span className="absolute bottom-5 text-xl text-cyan-500 drop-shadow-xl">
           Scroll down to learn more!
         </span>
       </section>
@@ -164,6 +164,7 @@ const PageHome = () => {
           }}>Join Hack Club slack</button>
         </div>
       </section>
+
       <section className="w-full bg-black text-white font-dynapuff">
         <div className="p-4 text-center flex flex-col items-center">
           <span className="text-2xl sm:text-3xl ">
