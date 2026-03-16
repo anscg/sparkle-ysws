@@ -234,38 +234,125 @@ const PageHome = () => {
                 A: Unlike other YSWS(s) where you're working alone or just building for the sake of building, this program is specifically designed for <b>skill transfer and collaboration between people</b>! No more wishing that you had their skills, start doing this with your friend so they can teach you their ways!
               </span>
             </div>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 border-4 border-black/50 bg-white/20 p-3 text-lg">
+              <span className="font-dynapuff flex-1">Still have questions? Join us on Slack!</span>
+              <div className="flex gap-2">
+                <button
+                  className="bg-amber-400 border-2 border-black/30 px-3 py-1.5 font-semibold hover:scale-90 transition-all"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(
+                      "https://hackclub.enterprise.slack.com/archives/C0AG9ASJ5U4",
+                      "_blank",
+                    );
+                  }}
+                >
+                  Open channel
+                </button>
+                <button
+                  className="bg-red-500 border-2 border-black/30 px-3 py-1.5 font-semibold text-white hover:scale-90 transition-all"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open("https://hackclub.com/slack", "_blank");
+                  }}
+                >
+                  Join Hack Club Slack
+                </button>
+              </div>
+            </div>
           </div>
           </div>
         </section>
 
-        <section className="w-full font-dynapuff py-10">
-          <div className="flex flex-col md:flex-row w-full bg-cyan-300 border-4 border-x-0 items-center justify-center gap-4 p-4">
-            <h1 className="text-4xl">
-                Questions left?
-              <br /> <u>Join our Slack channel</u>
-            </h1>
-            <button
-              className="bg-yellow-300 p-4 rounded-full hover:scale-120 transition-all"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(
-                  "https://hackclub.enterprise.slack.com/archives/C0AG9ASJ5U4",
-                  "_blank",
-                );
-              }}
-            >
-              Open channel
-            </button>
-            <button
-              className="bg-red-300 p-4 rounded-full hover:scale-120 transition-all"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open("https://hackclub.com/slack", "_blank");
-              }}
-            >
-              Join Hack Club slack
-            </button>
+      <section className="w-full font-dynapuff py-12 px-4 sm:px-6 lg:px-10 text-black">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-8 flex items-center gap-4 sm:gap-6">
+            <span className="h-[3px] flex-1 bg-gradient-to-r from-black/70 to-transparent" />
+            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">The Team 🌟</h2>
+            <span className="h-[3px] flex-1 bg-gradient-to-r from-transparent to-black/70" />
           </div>
+          <p className="mb-10 text-center text-base text-black/70 sm:text-lg max-w-2xl mx-auto">
+            Meet the people behind Sparkle — we're a group of people who believe the best way to learn is with a friend by your side.
+          </p>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            {[
+              {
+                initials: "Y",
+                color: "bg-purple-400",
+                name: "Yehor",
+                handle: "@yehor",
+                role: "Developer",
+                bio: "Made the website from scratch. Owns the repo and drew the clouds.",
+                quote: "{insert wise quote here}",
+                photo: "src/assets/yehor.jpeg",
+              },
+              {
+                initials: "Z",
+                color: "bg-yellow-400",
+                name: "Zac T",
+                handle: "@zook",
+                role: "Lead Organizer and Developer",
+                bio: "Has no skills whatsover. Came up with the idea on his bed and fell off his bed to jot down the idea.",
+                quote: "chat will drinking 3 coffees in a day kill me",
+                photo: "src/assets/zook.png",
+              },
+              {
+                initials: "C",
+                color: "bg-pink-400",
+                name: "Candy",
+                handle: "@candy",
+                role: "Artist",
+                bio: "Created the background for the website and designed the two mascots!",
+                quote: "{insert another wise quote here}",
+                photo: "src/assets/candy.png",
+              },
+              {
+                initials: "A",
+                color: "bg-green-400",
+                name: "Anson Chung",
+                handle: "@Anson Chung",
+                role: "The Unemployed",
+                bio: "Decides to make a PR because he thinks the clouds were too spread out on the previous version of the website.",
+                quote: "I'd recommend removing ur jd Vance meme folder before applying for the visa",
+                photo: "src/assets/anson.jpeg",
+              },
+            ].map(({ initials, color, name, handle, role, bio, quote, photo }) => (
+              <div
+                key={handle}
+                className="flex flex-col border-4 border-black/50 bg-white/20 hover:scale-105 transition-transform duration-200"
+              >
+                <div className="flex justify-center pt-4">
+                  {photo ? (
+                    <img
+                      src={photo}
+                      alt={name}
+                      className="w-24 aspect-square object-cover object-top border-4 border-black/20"
+                    />
+                  ) : (
+                    <div
+                      className={`${color} flex w-24 aspect-square items-center justify-center text-4xl font-bold text-white border-4 border-black/20`}
+                    >
+                      {initials}
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-col gap-2 p-3 text-lg">
+                  <div>
+                    <p className="font-dynapuff text-xl font-bold leading-tight">{name}</p>
+                    <p className="text-sm text-black/50">{handle}</p>
+                  </div>
+                  <span className="self-start bg-black/10 px-2 py-0.5 text-sm font-semibold">
+                    {role}
+                  </span>
+                  <p className="font-medium text-black/80 leading-snug">{bio}</p>
+                  <blockquote className="border-l-4 border-black/30 pl-3 text-sm italic text-black/60">
+                    "{quote}"
+                  </blockquote>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="w-full text-white font-dynapuff">
@@ -300,7 +387,7 @@ const PageHome = () => {
       <section className="w-full bg-black font-dynapuff">
         <div className="p-2 text-center">
           <span className="text-xs sm:text-sm text-gray-400">
-            Website - @yehor & @zook,  Ideas - @zook, Art -  @candy
+            Made with ✨ by the Sparkle team. Go join #zacs-corner :){" "}
           </span>
         </div>
       </section>
